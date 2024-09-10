@@ -16,27 +16,16 @@ pipeline {
         stage('Build') {
             steps {
                 nodejs('Node') {
-                    stage('Check Node.js Version') {
-                        steps {
-                            // เช็คเวอร์ชั่นของ Node.js
-                            sh 'node --version'
-                            // เช็คเวอร์ชั่นของ npm
-                            sh 'npm --version'
-                        }
-                    }
+                        // เช็คเวอร์ชั่นของ Node.js
+                        sh 'node --version'
+                        // เช็คเวอร์ชั่นของ npm
+                        sh 'npm --version'
 
-                    stage('Install Dependencies') {
-                        steps {
-                            // Install project dependencies
-                            sh 'npm install'
-                        }
-                    }
+                        // Install project dependencies
+                        sh 'npm install'
 
-                    stage('Build') {
-                        steps {
-                            // Build the project
-                            sh 'npm run build'
-                        }
+                        // Build the project
+                        sh 'npm run build'
                     }
                 }
             }
