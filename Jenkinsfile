@@ -13,14 +13,12 @@ pipeline {
             }
         }
 
-        stages {
-            stage('Check Node.js Version') {
-                steps {
-                    // เช็คเวอร์ชั่นของ Node.js
-                    sh 'node --version'
-                    // เช็คเวอร์ชั่นของ npm
-                    sh 'npm --version'
-                }
+        stage('Check Node.js Version') {
+            steps {
+                // เช็คเวอร์ชั่นของ Node.js
+                sh 'node --version'
+                // เช็คเวอร์ชั่นของ npm
+                sh 'npm --version'
             }
         }
 
