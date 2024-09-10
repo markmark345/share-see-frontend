@@ -26,17 +26,12 @@ pipeline {
 
                     // Build the project
                     sh 'npm run build'
-                }
-            }
-        }
-        
 
-        stage('Deploy to Vercel') {
-            steps {
-                // Deploy to Vercel
-                sh '''
-                npx vercel --prod -t $VERCEL_TOKEN
-                '''
+                    // Deploy to Vercel
+                    sh '''
+                    npx vercel --prod -t $VERCEL_TOKEN
+                    '''
+                }
             }
         }
     }
