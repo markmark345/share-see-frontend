@@ -21,16 +21,18 @@ pipeline {
                     // เช็คเวอร์ชั่นของ npm
                     sh 'npm --version'
 
+
+
                     // Install project dependencies
-                    sh 'npm install'
+                    // sh 'npm install'
 
-                    // Build the project
-                    sh 'npm run build'
+                    // // Build the project
+                    // sh 'npm run build'
 
-                    // Deploy to Vercel
-                    sh '''
-                    npx vercel --prod -t $VERCEL_TOKEN
-                    '''
+                    // // Deploy to Vercel
+                    // sh '''
+                    // npx vercel --prod -t $VERCEL_TOKEN
+                    // '''
                 }
             }
         }
